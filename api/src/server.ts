@@ -1,5 +1,5 @@
-import { PrismaClient } from '@prisma/client'
 import fastify from 'fastify'
+import { PrismaClient } from '@prisma/client'
 import {z} from 'zod'
 
 const app = fastify()
