@@ -33,7 +33,7 @@ app.post('/users', async (request, reply) => {
 app.post('/plantas', async (request, reply) => {
   const createPlantaSchema = z.object({
     NOME_PLANTA:z.string(),
-    BOMBA_STATUS:z.boolean(),
+    BOMBA_STATUS:z.string(),
     REGA_TEMPO: z.string(),
     UMIDADE: z.string(),
     REGAS: z.string(),
@@ -62,6 +62,7 @@ app.post('/plantas', async (request, reply) => {
 
   return reply.status(201).send()
 })
+app.put('/plantas', async (request, reply) => {})
 
 
 app.listen({
