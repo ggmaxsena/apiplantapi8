@@ -23,8 +23,8 @@ model Planta {
   hardware String
   usuario String
   NOME_PLANTA String
-  BOMBA_STATUS boolean
+  BOMBA_STATUS String
   REGA_TEMPO String
-  UMIDADE number
-  REGRAS String
+  UMIDADE String
+  REGAS String
 }

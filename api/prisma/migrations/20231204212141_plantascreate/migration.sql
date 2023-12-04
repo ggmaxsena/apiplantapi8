@@ -1,0 +1,15 @@
+-- CreateTable
+CREATE TABLE "Planta" (
+    "id" TEXT NOT NULL,
+    "imagem" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "hardware" TEXT NOT NULL,
+    "usuario" TEXT NOT NULL,
+    "NOME_PLANTA" TEXT NOT NULL,
+    "BOMBA_STATUS" TEXT NOT NULL,
+    "REGA_TEMPO" TEXT NOT NULL,
+    "UMIDADE" TEXT NOT NULL,
+    "REGRAS" TEXT NOT NULL,
+
+    CONSTRAINT "Planta_pkey" PRIMARY KEY ("id")
+);
