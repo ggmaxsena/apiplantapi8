@@ -6,10 +6,10 @@ const app = fastify()
 
 const prisma = new PrismaClient()
 
-app.get('/users', async () => {
-  const users = await prisma.user.findMany()
+app.get('/plantas', async () => {
+  const plantas = await prisma.planta.findMany()
 
-  return { users }
+  return { plantas }
 })
 
 app.post('/users', async (request, reply) => {

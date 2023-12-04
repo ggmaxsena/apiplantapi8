@@ -16,3 +16,15 @@ model User {
   email     String
   createdAt DateTime @default(now())
 }
+model Planta {
+  id        String   @id @default(cuid())
+  imagem String
+  createdAt DateTime @default(now())
+  hardware string
+  usuario: string
+  NOME_PLANTA string
+  BOMBA_STATUS boolean
+  REGA_TEMPO string
+  UMIDADE number
+  REGRAS String
+}
