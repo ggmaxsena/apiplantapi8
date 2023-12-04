@@ -30,6 +30,39 @@ app.post('/users', async (request, reply) => {
   return reply.status(201).send()
 })
 
+app.post('/plantas', async (request, reply) => {
+  const createPlantaSchema = z.object({
+    NOME_PLANTA:z.string(),
+    BOMBA_STATUS:z.boolean(),
+    REGA_TEMPO: z.string(),
+    UMIDADE: z.string(),
+    REGAS: z.string(),
+    hardware: z.string(),
+
+  })
+
+  const {
+    NOME_PLANTA,
+    BOMBA_STATUS,
+    REGA_TEMPO,
+    UMIDADE,
+    REGAS,
+    hardware, } = createPlantaSchema.parse(request.body)
+
+  await prisma.planta.create({
+    data: {
+      NOME_PLANTA,
+      BOMBA_STATUS,
+      REGA_TEMPO,
+      UMIDADE,
+      REGAS,
+      hardware,
+    }
+  })
+
+  return reply.status(201).send()
+})
+
 app.listen({
   host: '0.0.0.0',
   port: process.env.PORT ? Number(process.env.PORT) : 3333,
