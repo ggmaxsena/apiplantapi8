@@ -7,7 +7,7 @@ const app = fastify()
 const prisma = new PrismaClient()
 
 app.get('/plantas', async () => {
-  const plantas = await prisma.planta.findMany()
+  const plantas = await prisma.user.findMany()
 
   return { plantas }
 })
@@ -49,7 +49,7 @@ app.post('/plantas', async (request, reply) => {
     REGAS,
     hardware, } = createPlantaSchema.parse(request.body)
 
-  await prisma.planta.create({
+  await prisma.user.create({
     data: {
       NOME_PLANTA,
       BOMBA_STATUS,

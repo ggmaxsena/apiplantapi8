@@ -16,6 +16,7 @@ model User {
   email     String
   createdAt DateTime @default(now())
 }
+
 model Planta {
   id        String   @id @default(cuid())
   imagem String
