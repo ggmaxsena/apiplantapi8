@@ -20,11 +20,11 @@ model Planta {
   id        String   @id @default(cuid())
   imagem String
   createdAt DateTime @default(now())
-  hardware string
-  usuario: string
-  NOME_PLANTA string
+  hardware String
+  usuario String
+  NOME_PLANTA String
   BOMBA_STATUS boolean
-  REGA_TEMPO string
+  REGA_TEMPO String
   UMIDADE number
   REGRAS String
 }
