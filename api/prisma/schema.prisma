@@ -18,14 +18,14 @@ model User {
 }
 
 model Planta {
-  id        String   @id @default(cuid())
-  imagem String
-  createdAt DateTime @default(now())
-  hardware String
-  usuario String
-  NOME_PLANTA String
+  id           String   @id @default(cuid())
+  imagem       String
+  createdAt    DateTime @default(now())
+  hardware     String
+  usuario      String
+  NOME_PLANTA  String
   BOMBA_STATUS String
-  REGA_TEMPO String
-  UMIDADE String
-  REGAS String
+  REGA_TEMPO   String
+  UMIDADE      String
+  REGAS        String
 }
