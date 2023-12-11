@@ -56,7 +56,7 @@ app.post('/plantas', async (request, reply) => {
       REGA_TEMPO,
       UMIDADE,
       REGAS,
-      hardware
+      hardware,
     }
   })
 
