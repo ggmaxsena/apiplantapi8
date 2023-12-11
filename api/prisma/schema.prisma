@@ -19,13 +19,12 @@ model User {
 
 model Planta {
   id           String   @id @default(cuid())
-  imagem       String
   createdAt    DateTime @default(now())
-  hardware     String
-  usuario      String
+  hardware     Float
   NOME_PLANTA  String
-  BOMBA_STATUS String
-  REGA_TEMPO   String
-  UMIDADE      String
+  BOMBA_STATUS Boolean
+  REGA_TEMPO   Float
+  UMIDADE      Float
   REGAS        String
+  USUARIO      String
 }

@@ -33,11 +33,12 @@ app.post('/users', async (request, reply) => {
 app.post('/plantas', async (request, reply) => {
   const createPlantaSchema = z.object({
     NOME_PLANTA:z.string(),
-    BOMBA_STATUS:z.string(),
-    REGA_TEMPO: z.string(),
-    UMIDADE: z.string(),
+    BOMBA_STATUS:z.boolean(),
+    REGA_TEMPO: z.number(),
+    UMIDADE: z.number(),
     REGAS: z.string(),
-    hardware: z.string(),
+    hardware: z.number(),
+    USUARIO: z.string(),
 
   })
 
@@ -47,7 +48,8 @@ app.post('/plantas', async (request, reply) => {
     REGA_TEMPO,
     UMIDADE,
     REGAS,
-    hardware, } = createPlantaSchema.parse(request.body)
+    hardware,
+    USUARIO, } = createPlantaSchema.parse(request.body)
 
   await prisma.planta.create({
     data: {
@@ -57,6 +59,7 @@ app.post('/plantas', async (request, reply) => {
       UMIDADE,
       REGAS,
       hardware,
+      USUARIO,
     }
   })
 
